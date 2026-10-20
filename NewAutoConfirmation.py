@@ -14,24 +14,24 @@ import time
 import warnings
 warnings.filterwarnings("ignore")
 
-juniper_user = 'Export_Report'
-juniper_pass = 'KukMPRIpyyb+23g'
+juniper_user = 'xxxxt'
+juniper_pass = 'xxxxxxx'
 
-host = 'db-eet-aws-23.ch8pixr5blz5.us-east-1.rds.amazonaws.com'
-port = 3306
-user = 'admin'
-password = 'Db_5yrCfj4t2aczdr'
-database='confirmations'
+host = 'xxxxxxx'
+port = xxxxx
+user = 'xxxxxx'
+password = 'xxxxxx'
+database='xxxxxxxx'
 
 def renew_access_token():
     while True:
-        access_token = '1000.cc61559508234acbb42200957d25e0a5.2b0d0794da65f7a80525e9c1260b7f85'
-        code = "1000.92a2443401d65ff79b43f9f02ac81ed3.eece2bdefbf1d04b1a661693261d9abd"
-        client_id = "1000.CFDOHTVE8ZZDXJVRR3VHR7U9C3W1UT"
-        client_secret = "30624b06180b20ab5252fc8e6145ad175762a367a0"
-        grant_type = "authorization_code"
-        refresh_token = "1000.9d12bc072d77ff73c02d1e2f659d1d31.817ca9d30e9766d85e91e0b11e4dcce6"
-        URL = "https://accounts.zoho.com/oauth/v2/token"
+        access_token = 'xxxxxxxxxxxxxxxxxxxxx'
+        code = "xxxxxxxxxxxxxxxxxxx"
+        client_id = "xxxxxxxxxxxxxx"
+        client_secret = "xxxxxxxxxxxxxxx"
+        grant_type = "xxxxxxxxxxxxxx"
+        refresh_token = "xxxxxxxxxxxxxxxxxxxxxxxx"
+        URL = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         params = {"refresh_token": refresh_token,"client_id": client_id,
             "client_secret": client_secret,"scope": ["Desk.tickets.ALL", "Desk.tickets.UPDATE", "Desk.tickets.CREATE"],
             "grant_type": "refresh_token"}
@@ -52,7 +52,7 @@ while True:
                       '@LastModifiedDate': 'LastModifiedDate','@AgencyRef':'AgencyRef','@TimeZone':'TimeZone'}
     
     def get_booking_codes():
-        url="https://www.eetglobal.com/wsExportacion/wsBookings.asmx?op=getBookingList"
+        url="xxxxxxxxxxxxxxxxxx"
         headers = {'content-type': 'text/xml','SOAPAction':'http://juniper.es/getBookingList',"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0",
             "Accept-Encoding": "*",
             "Connection": "keep-alive"}
@@ -87,7 +87,7 @@ while True:
     
     @retrying.retry(stop_max_attempt_number=3, wait_exponential_multiplier=1000, wait_exponential_max=10000)
     async def GetBookingData(session, code, pbar):
-        url = "https://www.eetglobal.com/wsExportacion/wsBookings.asmx"
+        url = "xxxxxxxxxxxxxxxxxxxx"
         headers = {
             'content-type': 'text/xml',
             'SOAPAction': "http://juniper.es/getBookings",
